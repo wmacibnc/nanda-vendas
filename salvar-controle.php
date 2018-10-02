@@ -10,8 +10,8 @@ include("config.php");
  $precoVenda = $_POST['precoVenda'];
  // Insere os dados no banco 
  $query = <<<QUERY
- INSERT INTO Controle(
-    nome,codigo,quantidade,precoCusto,precoVenda)
+ INSERT INTO CONTROLE(
+    NOME,CODIGO,QUANTIDADE,PRECOCUSTO,PRECOVENDA)
    VALUES (
     '$nome','$codigo','$quantidade','$precoCusto','$precoVenda'
    )

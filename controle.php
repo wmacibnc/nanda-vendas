@@ -21,8 +21,10 @@
   <div class="row">
   <div class="col-12">
   <?php
-  $queryEstoque = "SELECT SUM(QUANTIDADE*PRECOCUSTO) as TOTALCUSTO, SUM(QUANTIDADE*PRECOVENDA)  as TOTALVENDA FROM CONTROLE ";
+  $queryEstoque = "SELECT SUM(QUANTIDADE*PRECOCUSTO) AS TOTALCUSTO, SUM(QUANTIDADE*PRECOVENDA)  AS TOTALVENDA FROM CONTROLE ";
+  
   $resultEstoque = $con->query($queryEstoque);
+
   while($estoque = $resultEstoque->fetch_array(MYSQLI_ASSOC)) {
     //echo '<h6> Total Custo R$ '.$estoque['TOTALCUSTO'].',00</h6>';
     echo '<button type="button" class="btn btn-info">Total em Estoque para Venda R$ '.$estoque['TOTALVENDA'].',00</button>';
